@@ -17,12 +17,13 @@ void setup() {
 
 void loop() {
   
+  /*Gets values from accelerometer, gyroscope and magnometer and stores them in the respective event variables */
   event aevent, gevent, mevent;
   lsm.readAccelerometer(aevent);
   lsm.readGyro(gevent);
   lsm.readMagnetometer(mevent);
 
- 
+  /*Prints values on Serial Output*/
   Serial.println("Acceleration :");
   Serial.print("X=");
   Serial.print(accel_event.acceleration.x);
